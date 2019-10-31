@@ -21,16 +21,16 @@
       <property name="forceBigDecimals" value="false" />
     </javaTypeResolver>
 
-    <javaModelGenerator targetPackage="com.team.house.entity" targetProject="src/main/java">
+    <javaModelGenerator targetPackage="com.team.house.entity" targetProject="hou-dao/src/main/java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
 
-    <sqlMapGenerator targetPackage="com.team.house.mapper"  targetProject="src/main/java">
+    <sqlMapGenerator targetPackage="com.team.house.mapper"  targetProject="hou-dao/src/main/java">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
 
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.team.house.mapper"  targetProject="src/main/java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.team.house.mapper"  targetProject="hou-dao/src/main/java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
 
