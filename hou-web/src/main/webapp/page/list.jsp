@@ -55,7 +55,7 @@
 <DL class="search clearfix">
   <FORM id=sform method=post action=selectHouse>
     <LI class=bold>房屋信息</LI>
-    <input type="text" name="page" id="setPage" value="1">
+    <input type="hidden" name="page" id="setPage" value="1">
     标题：<INPUT class=text type=text name=title value="${condition.title}">
     区域:
         <SELECT id=district_id name=did>
