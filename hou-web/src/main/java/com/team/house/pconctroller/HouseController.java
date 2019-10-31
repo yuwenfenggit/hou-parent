@@ -40,6 +40,7 @@ public class HouseController {
             mfile.transferTo(file);
             house.setId(s);
             house.setPath(fileName);
+            house.setIspass(0);
             Users users =(Users) session.getAttribute("userinfo");
             house.setUserId(users.getId());
             houseService.insertSelective(house);
