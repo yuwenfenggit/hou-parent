@@ -22,7 +22,7 @@ public interface HouseMapper {
 
     int updateByPrimaryKey(House record);
 
-    List<House> getByUserId(Integer id);
+    List<House> getByUserId(Integer userid);
 
     House getById(String id);
 

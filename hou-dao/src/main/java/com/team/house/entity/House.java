@@ -27,9 +27,9 @@ public class House extends ExtHouse {
 
     private Integer streetId;
 
-    private Integer ispass;
+    private int ispass;
 
-    private Integer isdel;
+    private int isdel;
 
     private String path;
 
@@ -113,19 +113,19 @@ public class House extends ExtHouse {
         this.streetId = streetId;
     }
 
-    public Integer getIspass() {
+    public int getIspass() {
         return ispass;
     }
 
-    public void setIspass(Integer ispass) {
+    public void setIspass(int ispass) {
         this.ispass = ispass;
     }
 
-    public Integer getIsdel() {
+    public int getIsdel() {
         return isdel;
     }
 
-    public void setIsdel(Integer isdel) {
+    public void setIsdel(int isdel) {
         this.isdel = isdel;
     }
 

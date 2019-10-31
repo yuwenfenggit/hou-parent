@@ -55,7 +55,7 @@
 <DL class="search clearfix">
   <FORM id=sform method=post action=selectHouse>
     <LI class=bold>房屋信息</LI>
-    <input type="hidden" name="setPage" id="setPage" value="1">
+    <input type="text" name="page" id="setPage" value="1">
     标题：<INPUT class=text type=text name=title value="${condition.title}">
     区域:
         <SELECT id=district_id name=did>
@@ -94,7 +94,7 @@
 <UL>
   <LI class=current><A href="javascript:goPage(1)">首页</A></LI>
   <LI><A href="javascript:goPage(${houses.prePage == 0?1:houses.prePage})">上一页</A></LI>
-  <LI><A href="javascript:goPage(${houses.prePage == 0?houses.prePage:houses.nextPage})">下一页</A></LI>
+  <LI><A href="javascript:goPage(${houses.nextPage == 0?houses.prePage:houses.nextPage})">下一页</A></LI>
   <LI><A href="javascript:goPage(${houses.pages})">末页</A></LI></UL><SPAN
 class=total>${houses.pageNum}/${houses.pages}页</SPAN> </DIV></DIV>
 <DIV id=footer class=wrap>

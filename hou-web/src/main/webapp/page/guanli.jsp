@@ -51,25 +51,26 @@ rel=stylesheet type=text/css href="../css/style.css">
 <DIV id=houseArea>
 <TABLE class=house-list>
   <TBODY>
-  <c:forEach items="${list}" var="h">
-  <TR>
-    <TD class=house-thumb><SPAN><A href="details.htm" target="_blank"><img src="http://localhost:80/${h.path}" width="100" height="75" alt=""></A></SPAN></TD>
-    <TD>
-      <DL>
-        <DT><A href="details.htm" target="_blank">${h.title}</A></DT>
-        <DD>${h.dname}${h.sname},${h.tname},面积:${h.floorage}平米<BR>联系方式：${h.contact} </DD></DL></TD>
-      <td class=house-type>
-          <c:if test="${h.ispass==0}">
-              审核中....
-          </c:if>
-          <c:if test="${h.ispass==1}">
-              审核通过
-          </c:if>
-      </td>
-    <TD class=house-type><LABEL class=ui-green><INPUT onclick="location.href='showHouseById?id='+${h.id}" value="修    改" type=button name=search></LABEL></TD>
-    <TD class=house-price><LABEL class=ui-green><INPUT onclick="delHouse(this,${h.id})" value="删    除" type=button name=search id="but">
-      <input type="hidden" value="${h.id}">
-    </LABEL></TD></TR>
+  <c:forEach items="${lists}" var="hou">
+      <TR>
+          <TD class=house-thumb><SPAN><A href="details.htm" target="_blank"><img src="http://localhost:80/${hou.path}" width="100" height="75" alt=""></A></SPAN></TD>
+          <TD>
+              <DL>
+                  <DT><A href="details.htm" target="_blank">${hou.title}</A></DT>
+                  <DD>${hou.dname}${hou.sname},${hou.tname},面积:${hou.floorage}平米<BR>联系方式：${hou.contact} </DD></DL></TD>
+          <td class=house-type>
+              <c:if test="${hou.ispass==0}">
+                  审核中....
+              </c:if>
+              <c:if test="${hou.ispass==1}">
+                  审核通过
+              </c:if>
+          </td>
+          <TD class=house-type><LABEL class=ui-green><INPUT onclick="location.href='showHouseById?id='+${hou.id}" value="修    改" type=button name=search></LABEL></TD>
+          <TD class=house-price><LABEL class=ui-green><INPUT onclick="delHouse(this,${hou.id})" value="删    除" type=button name=search id="but">
+              <input type="hidden" value="${hou.id}">
+          </LABEL></TD></TR>
+
   </TBODY>
   </c:forEach>
   </TABLE>

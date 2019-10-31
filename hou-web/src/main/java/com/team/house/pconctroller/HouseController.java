@@ -44,18 +44,18 @@ public class HouseController {
             Users users =(Users) session.getAttribute("userinfo");
             house.setUserId(users.getId());
             houseService.insertSelective(house);
-            return "redirect:showHouse";
+            return "redirect:getByUserId";
         } catch (IOException e) {
             e.printStackTrace();
         }
         return "fabu";
     }
 
-    @RequestMapping("showHouse")
-    public String showHouse(HttpSession session, Model model){
+    @RequestMapping("getByUserId")
+    public String getByUserId(HttpSession session, Model model){
         Users userinfo =(Users) session.getAttribute("userinfo");
         List<House> byUserId = houseService.getByUserId(userinfo.getId());
-        model.addAttribute("list",byUserId);
+        model.addAttribute("lists",byUserId);
         return "guanli";
     }
 
@@ -85,7 +85,7 @@ public class HouseController {
                 File file = new File("G:\\image\\"+oldFile);
                 file.delete();
             }
-            return "redirect:showHouse";
+            return "redirect:getByUserId";
         } catch (Exception e) {
             e.printStackTrace();
         }

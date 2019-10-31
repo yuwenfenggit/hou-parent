@@ -40,7 +40,7 @@ public class UsersController {
         Users login = usersService.login(name, password);
         if (login!=null){
             session.setAttribute("userinfo",login);
-            return "redirect:showHouse";
+            return "redirect:getByUserId";
         }else {
             return "login";
         }
